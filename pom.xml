@@ -10,8 +10,8 @@
     <name>DukeCon HTML5 Client</name>
 
     <scm>
-        <url>https://github.com/ascheman/dukecon_html5</url>
-        <connection>scm:git:https://github.com/ascheman/dukecon_html5.git</connection>
+        <url>ssh://git@github.com/ascheman/dukecon_html5</url>
+        <connection>scm:git:ssh://git@github.com/ascheman/dukecon_html5.git</connection>
       <tag>HEAD</tag>
   </scm>
 
