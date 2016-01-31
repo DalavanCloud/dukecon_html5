@@ -3,19 +3,27 @@
 <head lang="de">
     <meta charset="UTF-8">
     <META name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <script type='text/javascript' src='js/scrollfix.js'></script>
     <script type='text/javascript' src='js/jquery-2.1.4.min.js'></script>
     <script type='text/javascript' src='js/underscore-min.js'></script>
     <script type='text/javascript' src='js/knockout-min-3.3.0.js'></script>
+    <script type='text/javascript' src='js/keycloak.js'></script>
     <link rel="stylesheet" type="text/css" href="css/pure-min.css"/>
     <link rel="stylesheet" href="css/side-menu.css">
     <link rel="stylesheet" type="text/css" href="css/dukecon.css"/>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>DukeCon</title>
 </head>
-<body>
-<header-widget params="value: talk().title"></header-widget>
+<body id="talkpage">
+<noscript><br><br>&nbsp;Please enable Javascript to use this site.</noscript>
+<login-widget></login-widget>
+<header-widget params="value: 'none'"></header-widget>
 <div class="content-wrapper">
     <div class="content talk-content">
+        <div style="margin:5px;">
+            <img style="cursor:pointer; margin-right: 2px; vertical-align: middle" title="Add to Favourites" data-bind="click: toggleFavourite, attr:{src: talk().favicon}"/>
+            <span style="font-size:110%; font-weight:bold;" data-bind="text: talk().title"></span>
+        </div>
         <table id="talkinfo">
             <tr>
                 <td class="talk-details">
@@ -43,9 +51,11 @@
         </table>
     </div>
 </div>
-<footer-widget/>
+<footer-widget></footer-widget>
+<alert-window params="{resourceTitle : 'favoriteAlertTitle', resourceBody : 'favoriteAlertBody'}"></alert-window>
 
-
+<script type='text/javascript' src='js/dukecloak.js'></script>
+<script type='text/javascript' src='js/dukecondb.js'></script>
 <script type='text/javascript' src='js/offline.js'></script>
 <script type='text/javascript' src='js/dukecon.js'></script>
 <script type='text/javascript' src='js/talk.js'></script>

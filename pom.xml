@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.dukecon</groupId>
     <artifactId>dukecon-html5-client</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>DukeCon HTML5 Client</name>
@@ -13,13 +12,14 @@
     <scm>
         <url>https://github.com/dukecon/dukecon_html5</url>
         <connection>scm:git:https://github.com/dukecon/dukecon_html5.git</connection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Set this to localhost if you would like to test upload server -->
         <nexus.repository.host>dev.dukecon.org</nexus.repository.host>
-        <nexus.repository.port></nexus.repository.port>
+        <nexus.repository.port />
         <nexus.repository.base>/nexus</nexus.repository.base>
     </properties>
 

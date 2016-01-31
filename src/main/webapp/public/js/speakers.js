@@ -2,14 +2,12 @@ function SpeakerViewModel() {
     var self = this;
     self.allSpeakers = ko.observableArray([]);
 
-    dukeconTalkUtils.getData(function(allData) {
-        self.initializeData(allData);
-    });
-
     self.initializeData = function(allData) {
+        var favourites = dukeconSettings.getFavourites();
         self.allSpeakers(_.map(allData.speakers, function(s) {
-            return new Speaker(s, allData.events, allData.speakers, allData.metaData);
+            return new Speaker(s, allData.events, allData.speakers, allData.metaData, favourites);
         }).sort(sortSpeaker));
+        hideLoading(200);
     };
 };
 
@@ -18,7 +16,14 @@ var sortSpeaker = function(s1, s2) {
         return -1;
     }
     return s1.name > s2.name ? 1 : 0;
+};
+
+var speakerModel;
+
+function initializeSpeakers() {
+    speakerModel = new SpeakerViewModel();
+    dukeconTalkUtils.getData(jsonUrl, speakerModel.initializeData);
+    ko.applyBindings(speakerModel);
 }
 
-languageUtils.init();
-ko.applyBindings(new SpeakerViewModel());
+initializeSpeakers();

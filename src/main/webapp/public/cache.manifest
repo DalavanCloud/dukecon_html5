@@ -13,7 +13,11 @@ css/dukecon.css
 css/pure-min.css
 css/side-menu.css
 # Images
+img/ajax-circle.gif
+img/ajax-star.gif
 img/Clock.png
+img/de.png
+img/en.png
 img/logo_javaland.gif
 img/filter.png
 img/Home.png
@@ -29,8 +33,14 @@ img/track_microservices.jpg
 img/track_newcomer.jpg
 img/Unknown.png
 img/favicon.ico
+img/checkbox.png
+img/checkbox_checked.png
+img/unlock_24px.svg
+img/lock_24px.svg
+img/menu_24px.svg
 # Js
 js/dukecon.js
+js/dukecondb.js
 js/dukecloak.js
 js/keycloak.js
 js/empty-model.js
@@ -43,6 +53,8 @@ js/talk.js
 js/talklist.js
 js/underscore-min.js
 js/ui.js
+# Rest
+rest/keycloak.json
 
 NETWORK:
 *
