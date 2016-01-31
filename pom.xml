@@ -55,6 +55,11 @@
             <name>DukeCon</name>
             <url>file://${java.io.tmpdir}/repos/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>dukecon</id>
+            <name>DukeCon</name>
+            <url>file://${java.io.tmpdir}/repos/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <build>
