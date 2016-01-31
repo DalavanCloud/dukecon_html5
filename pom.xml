@@ -50,14 +50,14 @@
 
     <distributionManagement>
         <repository>
-            <id>dukecon-releases</id>
+            <id>dukecon</id>
             <name>DukeCon Releases</name>
             <url>
                 http://${nexus.repository.host}${nexus.repository.port}${nexus.repository.base}/content/repositories/releases
             </url>
         </repository>
         <snapshotRepository>
-            <id>dukecon-snapshots</id>
+            <id>dukecon</id>
             <name>DukeCon Snapshots</name>
             <url>
                 http://${nexus.repository.host}${nexus.repository.port}${nexus.repository.base}/content/repositories/snapshots
