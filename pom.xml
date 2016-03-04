@@ -162,7 +162,7 @@
             </properties>
         </profile>
         <profile>
-            <id>dukecon</id>
+            <id>nexus-localhost</id>
             <activation>
                 <property>
                     <name>env.HOSTNAME</name>
