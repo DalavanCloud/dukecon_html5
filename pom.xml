@@ -175,5 +175,13 @@
                 <nexus.repository.base>/nexus</nexus.repository.base>
             </properties>
         </profile>
+        <profile>
+            <id>nexus-simple</id>
+            <properties>
+                <nexus.repository.host>localhost</nexus.repository.host>
+                <nexus.repository.port>:8081</nexus.repository.port>
+                <nexus.repository.base></nexus.repository.base>
+            </properties>
+        </profile>
     </profiles>
 </project>
